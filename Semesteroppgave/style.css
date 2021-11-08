@@ -1,0 +1,249 @@
+:root {
+    --colorDarkest: #093326;
+    --colorDark: #23483C;
+    --colorMedium: #438C75;
+    --colorLight: #79BEA8;
+    --colorLightest: #E4F2ED;
+    --colorWhite: white;
+    --colorWinner: #FB8604;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Geneva, sans-serif;
+    outline: 0;
+}
+
+h1 {
+    color: var(--colorDarkest);
+    padding: 1%;
+}
+
+h2 {
+    color: var(--colorWinner);
+    padding: 0.2%;
+}
+
+h3 {
+    color: var(--colorDarkest);
+    padding: 1%;
+}
+
+p {
+    padding: 0.5%;
+}
+
+a {
+    text-decoration-line: none;
+    color: var(--colorLightest);
+    padding: 1%;
+}
+
+a:hover {
+    color: var(--colorLight);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 120%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--colorDark);
+    padding: 1%;
+}
+
+header button {
+    flex: 1;
+    font-size: 110%;
+}
+
+
+main {
+    flex: 1;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--colorDark);
+    color: var(--colorLightest);
+}
+
+.content {
+    text-align: center;
+    background-color: var(--colorLight);
+    color: var(--colorDarkest);
+    margin: 1%;
+    padding: 1%;
+}
+
+input[type=text] {
+    border: 0;
+    color: var(--colorDarkest);
+    padding: 1%;
+    font-size: 100%;
+    text-align: center;
+}
+
+::placeholder {
+    color: var(--colorMedium);
+}
+
+button {
+    border: none;
+    background-color: inherit;
+    color: var(--colorLightest);
+    padding: 0.5%;
+    font-size: 110%;
+}
+
+button:hover {
+    cursor: pointer;
+    color: var(--colorLight);
+}
+
+/* Tables */
+table {
+    border-spacing: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+tr {
+    display: flex;
+    flex-direction: row;
+}
+
+th {
+    background-color: var(--colorDark);
+    color: var(--colorLightest);
+    padding: 1%;
+    display: flex;
+    flex: 1;
+    text-align: left;
+}
+
+td {
+    padding: 1%;
+    text-align: center;
+    display: flex;
+    flex: 1;
+}
+
+tr:nth-child(even) {
+    background: var(--colorLightest);
+}
+
+tr:nth-child(odd) {
+    background: var(--colorWhite);
+}
+
+.table-content {
+    overflow: auto;
+}
+
+/* Introduction */
+#introduction {
+    margin-top: 10%;
+}
+
+#information {
+    flex: 3;
+}
+
+#sources {
+    flex: 1;
+    border-top: solid var(--colorMedium);
+    text-align: center;
+    padding: 1%;
+}
+
+#sources a:hover {
+    color: var(--colorMedium);
+}
+
+/* Overview */
+#overview-table tr:nth-child(even):hover, #overview-table tr:nth-child(odd):hover {
+    background: var(--colorLight);
+}
+
+/* Details */
+@media screen and (min-width: 700px) {
+    #details-table {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        font-size: 90%;
+    }
+
+    #details-table tr {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    #details-table th {
+        border-bottom: solid var(--colorDarkest);
+        text-align: left;
+        width: 20vw;
+        white-space: nowrap;
+    }
+
+    #details-table td {
+        border-bottom: solid var(--colorLight);
+        text-align: center;
+    }
+}
+
+
+/* comparison */
+
+.winner {
+    color: var(--colorWinner);
+}
+
+#comparison-message {
+    display: flex;
+    justify-content: center;
+    color: var(--colorWinner);
+}
+
+#comparison-table {
+    font-size: 90%;
+}
+
+#comparison-table th {
+    font-size: 90%;
+}
+
+#comparison-table tr:nth-child(2) {
+    background: var(--colorMedium);
+    color: var(--colorLightest);
+}
+
+
+@media screen and (max-width: 700px) {
+    body {
+        font-size: 80%;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #comparison .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
